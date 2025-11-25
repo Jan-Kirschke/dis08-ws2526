@@ -49,7 +49,7 @@ def scrape():
                 "gf": gf,
                 "ga": ga,
                 "diff_text_sucess": diff_text_sucess
-            })
+            })      
 
         page += 1
         time.sleep(random.randint(1,3))
