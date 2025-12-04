@@ -1,4 +1,3 @@
-
 # Excercise 1
 """
 Write a function that takes a list value as an argument and returns a string 
@@ -11,17 +10,22 @@ passed to your function.
 spam = ['apples', 'bananas', 'tofu', 'cats']
 
 def list_function(liste: list):
+    if not liste:
+        print("Liste ist leer")
     output_string: str = ""
     for eintrag in liste:
-        if liste.index(eintrag) < len(liste) -1:
-            output_string += eintrag + ", "
-        elif liste.index(eintrag) < len(liste) -2:
+        if liste.index(eintrag) == len(liste) -1:
             output_string += eintrag
+        elif liste.index(eintrag) == len(liste) -2:
+            output_string += eintrag + " and "
         else:
-            output_string += "and " + eintrag
+            output_string += eintrag + ", "
+
     return output_string
 
-#print(list_function(spam))
+print()
+print("Excerise 1")
+print(list_function(spam))
 
 """
 For this exercise, we’ll try doing an experiment. If you flip a coin 100 times and write down an “H” 
@@ -72,8 +76,11 @@ numberOfStreaks = 0
 for versuch in range(durchläufe):
     numberOfStreaks += einen_würfel_test_durchlauf()
 
-#durchschnitt = numberOfStreaks / durchläufe
-#print(f"Durchschnittliche Anzahl Streaks pro {würfe_pro_durchlauf} Würfe: {durchschnitt}")
+durchschnitt = numberOfStreaks / durchläufe
+
+print()
+print("Excerise 2")
+print(f"Durchschnittliche Anzahl Streaks pro {würfe_pro_durchlauf} Würfe: {durchschnitt}")
 
 
 
@@ -98,7 +105,9 @@ def displayInventory(inventory):
         item_total += int(v)
     print("Total number of items: " + str(item_total))
 
-# displayInventory(stuff)
+print()
+print("Excerise 3")
+displayInventory(stuff)
 
 # List to Dictionary Function for Fantasy Game
 def addToInventory(inventory, addedItems):
@@ -112,4 +121,7 @@ def addToInventory(inventory, addedItems):
 inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 inv = addToInventory(inv, dragonLoot)
+
+print()
+print("Excerise 4")
 displayInventory(inv)
