@@ -82,8 +82,6 @@ print()
 print("Excerise 2")
 print(f"Durchschnittliche Anzahl Streaks pro {würfe_pro_durchlauf} Würfe: {durchschnitt}")
 
-bkjfkbsdbfkabsdkfb
-
 # Fantasy Game Inventory
 """ This is the expected output
 Inventory:
